@@ -1,0 +1,11 @@
+$ mysql -u cs346103 -p
+
+mysql> show database;
+mysql> use cs346103;
+mysql> show tables;
+mysql> source create-tables.txt
+mysql> describle emp;
+mysql> select * from emp;
+mysql> update dept set mgrsin='00001' where dno=1;
+mysql> delete from dept where dno=5;
+mysql>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>
+get-emp.php
+</title>
+</head>
+<b>Add New Customer</b>
+<body>
+
+<form action="insert-emp.php" method="POST">
+<b>Enter the supplier's name:</b>
+<input type="text" name="name">
+<p>
+<b>Enter the supplier's address:</b>
+<input type="text" name="addr">
+<p>
+<b>Enter the supplier's phone number:</b>
+<input type="text" name="phoneNo">
+<p>
+<b>Enter the supplier's salary:</b>
+<input type="text" name="esalary">
+<p>
+<b>Enter the employee's department number:</b>
+<input type="text" name="edno">
+<p>
+<b>Enter the employee's supervisor:</b>
+<input type="text" name="esuper">
+<p>
+<input type="submit" value="submit">
+</form>
+</body>
+
+<a href="main1.php"> back to menu </a>
+
+</html>

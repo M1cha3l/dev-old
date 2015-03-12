@@ -1,0 +1,28 @@
+create table emp
+(
+   sin char(5) not null,
+   name varchar(25) not null,
+   bdate date,
+   salary double(10,2),
+   dno int,
+   supersin char(5),
+   primary key (sin),
+   index super_ind (supersin),
+   foreign key (supersin) references emp(sin),
+   index dno_ind (dno)
+) type = innodb;
+
+create table dept
+(
+   name varchar(20) not null,
+   dno int not null,
+   mgrsin char(5),
+   primary key (dno),
+   unique (name),
+   index mgr_ind (mgrsin),
+   foreign key (mgrsin) references emp(sin)
+) type = innodb;
+
+alter table emp add 
+foreign key (dno) references dept(dno) on delete cascade
+on update cascade;

@@ -1,0 +1,17 @@
+changes to most recent schema plan:
+transaction and repair schema merged
+sale and carSold schema merged
+a few foreign key relationships
+
+our money type is decimal(19,4), which stores numbers in a decimal string
+
+when adding tuples with an auto_increment key, use the value NULL if you don't want to override the auto
+
+auto_increment may be an issue when one tuple needs to know the value to use as its foreign key
+eg, when adding an employee, you need to know the customer.custNo which makes auto_increment of little benefit
+since you either need to query to find out what it incremented to, or override this feature.
+one way to emulate auto_increment is to first query a table using 'SELECT MAX(custNo) FROM customer;'
+
+carPurchaseID and carPurchaseInfo was merged back into carPurchase, since custId does NOT determine date sold.
+
+we changed orders to include a date, and op to include a unit price
