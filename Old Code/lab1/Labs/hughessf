@@ -1,6 +1,0 @@
-<?php
-$host=":/var/run/mysqld/mysqld.sock";
-$user = "cs346103";  // your user name
-$pass = "w7WFBV7Y";  // your password
-$db = "cs346103";  // the name of your database
-?>
